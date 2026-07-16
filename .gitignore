@@ -3,3 +3,5 @@ dist/
 .env
 logs/
 attached_assets/
+lavalink/Lavalink.jar
+lavalink/plugins/*.jar
