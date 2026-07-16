@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["jdk21_headless"]
+nixPkgs = ["jdk17"]
 
 [start]
 cmd = "java -Xmx512m -jar lavalink/Lavalink.jar"
