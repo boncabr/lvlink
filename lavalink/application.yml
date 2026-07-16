@@ -34,6 +34,12 @@ lavalink:
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
+    ratelimit:
+      ipBlocks: []
+      excludedIps: []
+      strategy: "RotateOnBan"
+      searchTriggersFail: true
+      retryLimit: -1
 
 metrics:
   prometheus:
