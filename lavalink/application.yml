@@ -3,6 +3,10 @@ server:
   address: 0.0.0.0
 
 plugins:
+  youtube:
+    pot:
+      token: ""
+      visitorData: ""
 
 lavalink:
   plugins: []
