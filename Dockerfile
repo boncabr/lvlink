@@ -1,12 +1,11 @@
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:17-jre-alpine
 
-RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache wget libgcc libstdc++
 
 WORKDIR /app
 
 RUN mkdir -p plugins && \
-    wget -q --show-progress \
-        -O Lavalink.jar \
+    wget -q -O Lavalink.jar \
         "https://github.com/lavalink-devs/Lavalink/releases/download/4.2.2/Lavalink.jar" && \
     wget -q -O plugins/youtube-plugin-1.18.1.jar \
         "https://github.com/lavalink-devs/youtube-source/releases/download/1.18.1/youtube-plugin-1.18.1.jar" && \
@@ -17,7 +16,5 @@ RUN mkdir -p plugins && \
 COPY lavalink/application.yml application.yml
 
 EXPOSE 8099
-
-ENV SERVER_PORT=8099
 
 CMD ["java", "-Xmx512m", "-jar", "Lavalink.jar"]
