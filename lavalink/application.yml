@@ -12,8 +12,6 @@ plugins:
       - MUSIC
       - ANDROID_MUSIC
       - WEB
-      - WEB_EMBEDDED_PLAYER
-      - TV_EMBEDDED
     oauth:
       enabled: true
       skipInitialization: false
