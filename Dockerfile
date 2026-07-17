@@ -7,11 +7,7 @@ WORKDIR /app
 RUN mkdir -p plugins && \
     wget -q -O Lavalink.jar \
         "https://github.com/lavalink-devs/Lavalink/releases/download/4.2.2/Lavalink.jar" && \
-    wget -q -O plugins/youtube-plugin-1.18.1.jar \
-        "https://github.com/lavalink-devs/youtube-source/releases/download/1.18.1/youtube-plugin-1.18.1.jar" && \
-    wget -q -O plugins/sponsorblock-plugin-3.0.1.jar \
-        "https://github.com/topi314/sponsorblock-plugin/releases/download/3.0.1/sponsorblock-plugin-3.0.1.jar" && \
-    ls -lh *.jar plugins/
+    ls -lh *.jar
 
 COPY lavalink/application.yml application.yml
 

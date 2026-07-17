@@ -2,29 +2,12 @@ server:
   port: ${PORT:8099}
   address: 0.0.0.0
 
-plugins:
-  youtube:
-    enabled: true
-    allowSearch: true
-    allowDirectVideoIds: true
-    allowDirectPlaylistIds: true
-    clients:
-      - MUSIC
-      - ANDROID_MUSIC
-      - IOS
-      - IOS_MUSIC
-      - WEB
-    oauth:
-      enabled: true
-      skipInitialization: false
-      refreshToken: ${YOUTUBE_REFRESH_TOKEN:}
-
 lavalink:
   plugins: []
   server:
     password: "Ariekonur0"
     sources:
-      youtube: false
+      youtube: true
       bandcamp: true
       soundcloud: true
       twitch: true
