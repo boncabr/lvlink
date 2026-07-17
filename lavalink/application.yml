@@ -4,9 +4,19 @@ server:
 
 plugins:
   youtube:
-    pot:
-      token: ""
-      visitorData: ""
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+    clients:
+      - MUSIC
+      - ANDROID_MUSIC
+      - ANDROID
+      - TVHTML5EMBEDDED
+      - WEB
+    oauth:
+      enabled: true
+      skipInitialization: false
 
 lavalink:
   plugins: []
