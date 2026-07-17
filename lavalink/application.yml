@@ -11,6 +11,8 @@ plugins:
     clients:
       - MUSIC
       - ANDROID_MUSIC
+      - IOS
+      - IOS_MUSIC
       - WEB
     oauth:
       enabled: true
