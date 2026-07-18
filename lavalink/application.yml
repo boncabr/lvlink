@@ -12,7 +12,6 @@ plugins:
       - WEB
       - MWEB
       - TVHTML5_SIMPLY
-      - ANDROID_VR
       - MUSIC
 
 lavalink:
@@ -41,8 +40,8 @@ lavalink:
       rotation: true
       channelMix: true
       lowPass: true
-    bufferDurationMs: 400
-    frameBufferDurationMs: 5000
+    bufferDurationMs: 1000
+    frameBufferDurationMs: 1000
     youtubePlaylistLoadLimit: 6
     playerUpdateInterval: 5
     youtubeSearchEnabled: true
