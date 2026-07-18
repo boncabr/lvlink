@@ -5,7 +5,7 @@ lavalink:
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.5"
   server:
-    password: "youshallnotpass"
+    password: "Ariekonur0"
     sources:
       youtube: false
       bandcamp: false
