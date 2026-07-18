@@ -9,11 +9,11 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     clients:
-      - MUSIC
       - WEB
       - MWEB
       - TVHTML5_SIMPLY
       - ANDROID_VR
+      - MUSIC
 
 lavalink:
   plugins:
