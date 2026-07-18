@@ -2,4 +2,4 @@
 nixPkgs = ["jdk17"]
 
 [start]
-cmd = "java -Xmx512m -jar lavalink/Lavalink.jar"
+cmd = "java -Xms512M -Xmx1024M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=100 -Dfile.encoding=UTF-8 -jar lavalink/Lavalink.jar"
