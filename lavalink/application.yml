@@ -11,6 +11,8 @@ plugins:
     clients:
       - WEB
       - MWEB
+      - ANDROID
+      - IOS
       - TVHTML5_SIMPLY
       - MUSIC
 
@@ -51,7 +53,7 @@ lavalink:
       ipBlocks: []
       excludedIps: []
       strategy: "RotateOnBan"
-      searchTriggersFail: true
+      searchTriggersFail: false
       retryLimit: -1
 
 metrics:
