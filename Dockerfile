@@ -1,16 +1,13 @@
-FROM eclipse-temurin:17-jre-alpine
-
-RUN apk add --no-cache wget libgcc libstdc++
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
-RUN mkdir -p plugins && \
-    wget -q -O Lavalink.jar \
-        "https://github.com/lavalink-devs/Lavalink/releases/download/4.2.2/Lavalink.jar" && \
-    ls -lh *.jar
+RUN apk add --no-cache wget
 
-COPY lavalink/application.yml application.yml
+RUN wget -O Lavalink.jar https://github.com/lavalink-devs/Lavalink/releases/download/4.2.2/Lavalink.jar
 
-EXPOSE 8099
+COPY application.yml .
 
-CMD ["java", "-Xmx512m", "-jar", "Lavalink.jar"]
+EXPOSE 2333
+
+CMD ["java", "-XX:+UseG1GC", "-Xms512m", "-Xmx768m", "-Dfile.encoding=UTF-8", "-jar", "Lavalink.jar"]
