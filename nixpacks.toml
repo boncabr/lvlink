@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["jdk17"]
+nixPkgs = ["jdk21"]
 
 [start]
 cmd = "java -Xms512M -Xmx1024M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=100 -Dfile.encoding=UTF-8 -jar lavalink/Lavalink.jar"
