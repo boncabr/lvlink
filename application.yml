@@ -47,9 +47,9 @@ plugins:
     allowDirectPlaylistIds: true
     clients:
       - MUSIC
-      - IOS
-      - WEB
+      - WEB_EMBEDDED
       - TVHTML5EMBEDDED
+      - ANDROID
     pot:
       token: ${YOUTUBE_PO_TOKEN:}
       visitorData: ${YOUTUBE_VISITOR_DATA:}
