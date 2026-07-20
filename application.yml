@@ -1,26 +1,44 @@
 server:
-  port: 2333
+  port: ${PORT:2333}
   address: 0.0.0.0
+
 lavalink:
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.5"
+      repository: "https://maven.lavalink.dev/releases"
   server:
     password: "Ariekonur0"
     sources:
       youtube: false
-      bandcamp: false
+      bandcamp: true
       soundcloud: true
-      twitch: false
-      vimeo: false
+      twitch: true
+      vimeo: true
       http: true
       local: false
+    filters:
+      volume: true
+      equalizer: true
+      karaoke: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      distortion: true
+      rotation: true
+      channelMix: true
+      lowPass: true
     bufferDurationMs: 400
-    frameBufferDurationMs: 2500
-    youtubePlaylistLoadLimit: 6
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: MEDIUM
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 60
     playerUpdateInterval: 5
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
+
 plugins:
   youtube:
     enabled: true
@@ -29,7 +47,18 @@ plugins:
     allowDirectPlaylistIds: true
     clients:
       - MUSIC
-      - ANDROID_VR
+      - ANDROID_TESTSUITE
       - WEB
-    oauth:
-      enabled: true
+      - TVHTML5EMBEDDED
+    pot:
+      token: ${YOUTUBE_PO_TOKEN:}
+      visitorData: ${YOUTUBE_VISITOR_DATA:}
+
+metrics:
+  prometheus:
+    enabled: false
+
+logging:
+  level:
+    root: INFO
+    lavalink: INFO

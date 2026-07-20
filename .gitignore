@@ -1,7 +1,4 @@
-node_modules/
-dist/
-.env
 logs/
-attached_assets/
-lavalink/Lavalink.jar
-lavalink/plugins/*.jar
+*.jar
+.DS_Store
+plugins/
