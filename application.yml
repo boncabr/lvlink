@@ -55,6 +55,7 @@ plugins:
       visitorData: ${YOUTUBE_VISITOR_DATA:}
     oauth:
       enabled: true
+      refreshToken: ${YOUTUBE_REFRESH_TOKEN:}
 
 metrics:
   prometheus:
