@@ -46,9 +46,10 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     clients:
-      - MUSIC
+      - TV
+      - TVHTML5_SIMPLY
       - WEB
-      - TVHTML5_SIMPLY_EMBEDDED_PLAYER
+      - ANDROID_VR
     pot:
       token: ${YOUTUBE_PO_TOKEN:}
       visitorData: ${YOUTUBE_VISITOR_DATA:}
