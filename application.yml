@@ -50,6 +50,9 @@ plugins:
       - TVHTML5_SIMPLY
       - WEB
       - ANDROID_VR
+    remoteCipher:
+      url: "${CIPHER_SERVER_URL:}"
+      password: "${CIPHER_PASSWORD:}"
     pot:
       token: ${YOUTUBE_PO_TOKEN:}
       visitorData: ${YOUTUBE_VISITOR_DATA:}
